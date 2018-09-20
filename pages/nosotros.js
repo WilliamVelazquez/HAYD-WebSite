@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 
-class Home extends Component{
+class Nosotros extends Component{
   render() {
     return (
       <div>
@@ -65,4 +65,4 @@ class Home extends Component{
   }
 }
 
-export default Home;
+export default Nosotros;
