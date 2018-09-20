@@ -1,0 +1,27 @@
+{
+  "name": "HAYD-WebSite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamVelazquez/HAYD-WebSite.git"
+  },
+  "keywords": [],
+  "author": "William Velazquez <william.velazquez.a@gmail.com> (https://twitter.com/WilliamVlazquez)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WilliamVelazquez/HAYD-WebSite/issues"
+  },
+  "homepage": "https://github.com/WilliamVelazquez/HAYD-WebSite#readme",
+  "dependencies": {
+    "next": "^7.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
