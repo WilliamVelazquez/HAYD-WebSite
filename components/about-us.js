@@ -8,7 +8,7 @@ function AboutUs(props) {
 	return(
 		<div className="container">
       
-      <TitleBand title="Misión" />
+      <TitleBand title="Misión" position="left"/>
 
       <div className="textContainer">
         <p className="text">Nuestra misión es.................</p>

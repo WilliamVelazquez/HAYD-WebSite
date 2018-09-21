@@ -18,6 +18,7 @@ function TitleBand(props) {
           margin:0;
           padding:15px;
           color:#052A4F;
+          text-align: ${props.position || "left"};
         }
       `}</style>
     </div>
