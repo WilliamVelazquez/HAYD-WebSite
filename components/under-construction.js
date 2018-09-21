@@ -66,6 +66,14 @@ function UnderConstruction(props) {
         img{
           width: 22%;
         }
+        @media only screen and (max-width : 667px) {
+          .btnContainer{
+            grid-auto-flow: row;
+            grid-row-gap: 15px;
+            grid-template-columns: 1fr;
+            gap-row
+          }
+        }
       `}</style>
     </div>
 	);

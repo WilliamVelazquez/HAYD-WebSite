@@ -19,6 +19,7 @@ function Header(props) {
           :<meta name="robots" content="noindex, nofollow" />
         }
         <title>{props.active || "Inicio"}</title>
+        <link rel="icon" href="/static/HAYD.ico" />
       </Head>
       
       <nav className="navbar">
