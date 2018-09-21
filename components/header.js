@@ -1,10 +1,26 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 
 function Header(props) {
 	//console.log(props);
 	return(
 		<header>
+      <Head>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta 
+          name="description" 
+          content="Te ayudamos a conocer la factibilidad, viabilidad y rentabilidad de tu proyecto con indicadores financieros y estrategias para optimizar tu operación."
+        />
+        {
+          (props.active=="Inicio" || props.active=="Nosotros" || props.active=="Contacto")?
+          <meta name="robots" content="index, follow" />
+          :<meta name="robots" content="noindex, nofollow" />
+        }
+        <title>{props.active || "Inicio"}</title>
+      </Head>
+      
       <nav className="navbar">
         <div className="left">
           <Link href="/">
