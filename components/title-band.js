@@ -1,0 +1,26 @@
+import React from 'react';
+
+function TitleBand(props) {
+	//console.log(props);
+	return(
+		<div className="container">
+      
+      <h2>{props.title}</h2>
+
+      <style jsx>{`
+        .container{
+          width:100%;
+          background: #F1C40F;
+          margin:40px 5px;
+        }
+        h2{
+          margin:0;
+          padding:15px;
+          color:#052A4F;
+        }
+      `}</style>
+    </div>
+	);
+}
+
+export default TitleBand;

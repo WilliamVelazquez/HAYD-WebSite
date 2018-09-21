@@ -9,15 +9,19 @@ function UnderConstruction(props) {
 		<div className="container">
       
       <h1 className="text">En Construcción</h1>
-      
+
       <p className="text">Visita nuestras redes sociales</p>
       <SocialNetworks />
       
       <img src="/static/LogoHAYD.png" alt="HAYD"/>
 
       <div className="btnContainer">
-        <button type="button">Contáctanos!</button>
-        <button type="button">Acerca de nosotros!</button>
+        <Link href="/nosotros">
+          <button type="button">Acerca de nosotros!</button>
+        </Link>
+        <Link href="/contacto">
+          <button type="button">Contáctanos!</button>
+        </Link>
       </div>
 
 

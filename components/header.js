@@ -60,6 +60,17 @@ function Header(props) {
           margin:0;
           padding:0;
           align-self:center;
+          color:#052A4F;
+        }
+        @media only screen and (max-width : 768px) {
+          .left h2{
+            font-size:20px;
+          }
+        }
+        @media only screen and (max-width : 667px) {
+          .left h2{
+            display:none;
+          }
         }
       `}</style>
     </header>
