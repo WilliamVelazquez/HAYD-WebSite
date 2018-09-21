@@ -1,19 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
 
+import SocialNetworks from './social-networks';
+
 function UnderConstruction(props) {
 	//console.log(props);
 	return(
 		<div className="container">
       
       <h1 className="text">En Construcción</h1>
-      <p className="text">El sitio estará listo pronto!</p>
+      
+      <p className="text">Visita nuestras redes sociales</p>
+      <SocialNetworks />
+      
       <img src="/static/LogoHAYD.png" alt="HAYD"/>
 
       <div className="btnContainer">
         <button type="button">Contáctanos!</button>
         <button type="button">Acerca de nosotros!</button>
       </div>
+
 
       <style jsx>{`
         .container{
@@ -36,6 +42,7 @@ function UnderConstruction(props) {
           margin: 10px;
         }
         button{
+          cursor: pointer;
           border-radius: 5px;
           border: 3px solid #fff;
           padding: 10px;
@@ -53,7 +60,7 @@ function UnderConstruction(props) {
           background: #fff;
         }
         img{
-          width: 25%;
+          width: 22%;
         }
       `}</style>
     </div>

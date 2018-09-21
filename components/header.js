@@ -8,6 +8,7 @@ function Header(props) {
       <nav className="navbar">
         <div className="left">
           <img src="/static/LogoHAYD.png" alt="HAYD"/>
+          <h2>HAYD Consulting</h2>
         </div>
         <Link prefetch href="/">
           <a className={`${props.active=="Inicio"?"active":""}`}>Inicio</a>
@@ -51,6 +52,14 @@ function Header(props) {
         .left{
           flex:1;
           float:left;
+          display:grid;
+          grid-auto-flow: column;
+          grid-template-columns: 60px 1fr;
+        }
+        .left h2{
+          margin:0;
+          padding:0;
+          align-self:center;
         }
       `}</style>
     </header>
