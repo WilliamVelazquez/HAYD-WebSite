@@ -2,7 +2,7 @@
 
 Temporal Website for HAYD Consulting developed with NextJS
 
-![Home Page](./.readme-stati/Home.png)
+![Home Page](./.readme-static/Home.png)
 
 ## ¿How it works?
 
@@ -18,4 +18,4 @@ Require Node.JS
 
 ## Screenshots
 
-![Contact Form](./.readme-stati/Contact.png)
+![Contact Form](./.readme-static/Contact.png)
