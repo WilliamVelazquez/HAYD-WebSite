@@ -11,7 +11,8 @@ function TitleBand(props) {
         .container{
           width:100%;
           background: #F1C40F;
-          margin:40px 5px;
+          margin:40px 0px;
+          margin-bottom: 25px;
         }
         h2{
           margin:0;

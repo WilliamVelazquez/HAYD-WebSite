@@ -9,9 +9,29 @@ function SocialNetworks(props) {
 	return(
 		<div className="container">
 
-      <button className="fa" type="button"><FontAwesomeIcon icon={ faFacebookF } /></button>
-      <button className="fa" type="button"><FontAwesomeIcon icon={ faTwitter } /></button>
-      <button className="fa" type="button"><FontAwesomeIcon icon={ faInstagram } /></button>
+      <button 
+        className="fa" 
+        type="button"
+        onClick={props.facebook || null}
+      >
+        <FontAwesomeIcon icon={ faFacebookF } />
+      </button>
+
+      <button 
+        className="fa" 
+        type="button"
+        onClick={props.twitter || null}
+      >
+        <FontAwesomeIcon icon={ faTwitter } />
+      </button>
+
+      <button 
+        className="fa" 
+        type="button"
+        onClick={props.instagram || null}
+      >
+        <FontAwesomeIcon icon={ faInstagram } />
+      </button>
       
       <style jsx>{`
         .container{
@@ -52,6 +72,7 @@ function SocialNetworks(props) {
         {
           color: #052A4F;
           background: #fff;
+          border: none;
         }
         img{
           width: 25%;

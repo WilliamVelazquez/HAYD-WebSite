@@ -7,8 +7,10 @@ function Header(props) {
 		<header>
       <nav className="navbar">
         <div className="left">
-          <img src="/static/LogoHAYD.png" alt="HAYD"/>
-          <h2>HAYD Consulting</h2>
+          <Link href="/">
+            <img className="btn" src="/static/LogoHAYD.png" alt="HAYD"/>
+          </Link>  
+            <h2>HAYD Consulting</h2>
         </div>
         <Link prefetch href="/">
           <a className={`${props.active=="Inicio"?"active":""}`}>Inicio</a>
@@ -48,6 +50,9 @@ function Header(props) {
         }
         img{
           width: 50px;
+        }
+        .btn{
+          cursor:pointer;
         }
         .left{
           flex:1;
