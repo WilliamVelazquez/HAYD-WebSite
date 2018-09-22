@@ -12,13 +12,13 @@ function AboutUs(props) {
       <TitleBand title="Misión" position="left"/>
 
       <div className="textContainer">
-        <p className="text">Somos una empresa enfocada en consultoría financiera, nuestro propósito es ayudarte a conocer la factibilidad y rentabilidad de tu empresa, startup o el proyecto que tienes planeado realizar, ayudarte a materializar tu idea de negocio y diseñar estrategias para optimizar tus recursos e incrementar tus rendimientos, lo haremos a través de un análisis financiero que nos dirá la situación de tu empresa  o el crecimiento esperado si es que es una empresa nueva, buscando siempre ayudar a mejorar la estructura financiera de tu empresa para un funcionamiento óptimo.</p>
+        <p className="text">Impulsar la materialización de tu plan de negocios mediante el análisis financiero y el diseño de estrategias empresariales para la creación de valor.</p>
       </div>
 
       <TitleBand title="Visión" />
 
       <div className="textContainer">
-        <p className="text">Ser la consultora de negocios más importante de México y poder ampliar operaciones a toda América Latina ayudando a mejorar la estructura financiera de empresas en todo el mundo y generar un impacto económico positivo global.</p>
+        <p className="text">Ser la consultora de negocios más importante de México con influencia en toda América Latina favoreciendo un impacto económico positivo global.</p>
       </div>
 
       <TitleBand title="Valores" />
@@ -26,10 +26,10 @@ function AboutUs(props) {
       <div className="textContainer">
         <List
           items={[
-            {key:'Honestidad', description:'Siempre decir la verdad al cliente.'},
+            {key:'Honestidad', description:'Nuestro activo más valioso.'},
             {key:'Responsabilidad', description:'Comprometernos a realizar nuestro trabajo en tiempo en y forma.'},
-            {key:'Colaboración', description:'Ayudarte mano a mano a lograr tus metas y ayudarte a crecer tu empresa.'},
-            {key:'Pasión', description:'Volvernos parte de tu empresa hasta cumplir juntos los objetivos planteados.'},
+            {key:'Colaboración', description:'Ayudarte a cultivar el valor tu empresa.'},
+            {key:'Pasión', description:'Convertirnos en parte de tu empresa hasta cumplir juntos los objetivos planteados.'},
             {key:'Respeto', description:'Siempre con una actitud y un trato digno.'}
           ]}
         />

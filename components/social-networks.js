@@ -9,29 +9,35 @@ function SocialNetworks(props) {
 	return(
 		<div className="container">
 
-      <button 
+      <a 
         className="fa" 
         type="button"
-        onClick={props.facebook || null}
+        target="_blank" 
+        rel="noopener noreferrer" 
+        href={props.facebook || "https://www.facebook.com/HAYDConsulting/"}
       >
         <FontAwesomeIcon icon={ faFacebookF } />
-      </button>
+      </a>
 
-      <button 
+      <a 
         className="fa" 
         type="button"
-        onClick={props.twitter || null}
+        target="_blank" 
+        rel="noopener noreferrer" 
+        href={props.twitter || "https://twitter.com/HaydConsulting"}
       >
         <FontAwesomeIcon icon={ faTwitter } />
-      </button>
+      </a>
 
-      <button 
+      <a 
         className="fa" 
         type="button"
-        onClick={props.instagram || null}
+        target="_blank" 
+        rel="noopener noreferrer" 
+        href={props.instagram || "https://www.instagram.com/haydconsulting/"}
       >
         <FontAwesomeIcon icon={ faInstagram } />
-      </button>
+      </a>
       
       <style jsx>{`
         .container{
@@ -48,14 +54,14 @@ function SocialNetworks(props) {
         .fa{
           padding: 15px;
           font-size: 20px;
-          width: 60px;
+          width: 30px;
           text-align: center;
           text-decoration: none;
           margin: 5px 2px;
           border-radius: 50%;
           justify-self: center;
         }
-        button{
+        a{
           cursor: pointer;
           border-radius: 5px;
           border: 3px solid #fff;
@@ -67,12 +73,9 @@ function SocialNetworks(props) {
           -webkit-transition-duration: 0.4s; /* Safari */
           transition-duration: 0.4s;
         }
-        button:hover,
-        button:active
-        {
+        a:hover{
           color: #052A4F;
           background: #fff;
-          border: none;
         }
         img{
           width: 25%;

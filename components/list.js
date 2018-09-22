@@ -8,7 +8,7 @@ function List(props) {
       {
         props.items.map(item => {
           return(
-            <div>
+            <div key={item.key}>
               <p className="title">{`• ${item.key}: `}</p>
               <p className="description">{item.description}</p>
             </div>
