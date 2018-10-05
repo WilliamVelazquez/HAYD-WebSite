@@ -20,8 +20,14 @@ function Header(props) {
         }
         <title>{props.active || "Inicio"}</title>
         <link rel="icon" href="/static/HAYD.ico" />
+        
         <meta name="theme-color" content="#0A73ED" />
         <link rel="manifest" href="/static/manifest.webmanifest" />
+
+        <link rel='apple-touch-icon' href='/static/Logo_HAYD.png' />
+        <meta name="apple-mobile-web-app-title" content="HAYD" />
+        <meta name="apple-mobile-web-app-capable" content="no" />
+        <meta name="apple-mobile-web-apps-status-bar-style" content="black-translucent" />
       </Head>
       
       <nav className="navbar">
