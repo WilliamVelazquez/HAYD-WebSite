@@ -8,7 +8,7 @@ function UnderConstruction(props) {
 	return(
 		<div className="container">
       
-      <h1 className="text">En Construcción</h1>
+      <h1 className="text">{props.msg}</h1>
 
       <p className="text">Visita nuestras redes sociales</p>
       <SocialNetworks />
@@ -72,6 +72,11 @@ function UnderConstruction(props) {
             grid-row-gap: 15px;
             grid-template-columns: 1fr;
             gap-row
+          }
+        }
+        @media only screen and (max-width : 768px) {
+          img{
+            width: 50%;
           }
         }
       `}</style>

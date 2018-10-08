@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import IfOffline from '../containers/if-offline';
+
 function Header(props) {
 	//console.log(props);
 	return(
@@ -18,7 +20,7 @@ function Header(props) {
           <meta name="robots" content="index, follow" />
           :<meta name="robots" content="noindex, nofollow" />
         }
-        <title>{props.active || "Inicio"}</title>
+        <title>{props.active || "HAYD"}</title>
         <link rel="icon" href="/static/HAYD.ico" />
         
         <meta name="theme-color" content="#0A73ED" />
@@ -35,7 +37,8 @@ function Header(props) {
           <Link href="/">
             <img className="btn" src="/static/LogoHAYD.png" alt="HAYD"/>
           </Link>  
-            <h2>HAYD Consulting</h2>
+            <h2>HAYD Consulting <IfOffline>Offline</IfOffline></h2>
+            <h3><IfOffline>Offline</IfOffline></h3>
         </div>
         <Link prefetch href="/">
           <a className={`${props.active=="Inicio"?"active":""}`}>Inicio</a>
@@ -92,6 +95,13 @@ function Header(props) {
           align-self:center;
           color:#052A4F;
         }
+        .left h3{
+          margin:0;
+          padding:0;
+          align-self:center;
+          color:#F1C40F;
+          display:none;
+        }
         @media only screen and (max-width : 768px) {
           .left h2{
             font-size:20px;
@@ -100,6 +110,9 @@ function Header(props) {
         @media only screen and (max-width : 667px) {
           .left h2{
             display:none;
+          }
+          .left h3{
+            display:block;
           }
         }
       `}</style>

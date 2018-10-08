@@ -18,8 +18,7 @@ function List(props) {
 
       <style jsx>{`
         .container{
-          width:100%;
-          margin-bottom: 20px;
+          width: 100%;
         }
         .title{
           color: #fff;

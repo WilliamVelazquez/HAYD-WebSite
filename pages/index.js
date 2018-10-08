@@ -8,7 +8,7 @@ class Home extends Component{
     return (
       <div>
         <Header active="Inicio" />
-        <UnderConstruction />
+        <UnderConstruction msg="En Construcción"/>
         <style jsx global>{`
           body{
             margin: 0;

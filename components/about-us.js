@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SimplePanel from './simple-panel';
 import TitleBand from './title-band';
 import List from './list';
 import SocialNetworks from './social-networks';
@@ -8,22 +9,16 @@ function AboutUs(props) {
 	//console.log(props);
 	return(
 		<div className="container">
-      
+
       <TitleBand title="Misión" position="left"/>
-
-      <div className="textContainer">
-        <p className="text">Impulsar la materialización de tu plan de negocios mediante el análisis financiero y el diseño de estrategias empresariales para la creación de valor.</p>
-      </div>
-
+      <SimplePanel text="Impulsar la materialización de tu plan de negocios mediante el análisis financiero y el diseño de estrategias empresariales para la creación de valor."/>
+      
       <TitleBand title="Visión" />
-
-      <div className="textContainer">
-        <p className="text">Ser la consultora de negocios más importante de México con influencia en toda América Latina favoreciendo un impacto económico positivo global.</p>
-      </div>
+      <SimplePanel text="Ser la consultora de negocios más importante de México con influencia en toda América Latina favoreciendo un impacto económico positivo global."/>
 
       <TitleBand title="Valores" />
 
-      <div className="textContainer">
+      <SimplePanel>
         <List
           items={[
             {key:'Honestidad', description:'Nuestro activo más valioso.'},
@@ -33,26 +28,13 @@ function AboutUs(props) {
             {key:'Respeto', description:'Siempre con una actitud y un trato digno.'}
           ]}
         />
-      </div>
+      </SimplePanel>
 
       <SocialNetworks />
 
       <style jsx>{`
         .container{
           width:100%;
-        }
-        .textContainer{
-          border-radius: 10px;
-          background: rgba(255,255,255,0.2);
-          padding: 10px;
-          margin: 0px 30px;
-          height: 100%;
-          text-align: left;
-          color: #fff;
-        }
-        .text{
-          margin:5px;
-          text-align: justify;
         }
       `}</style>
     </div>
