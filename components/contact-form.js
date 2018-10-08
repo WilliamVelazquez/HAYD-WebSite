@@ -17,16 +17,18 @@ function ContactForm(props) {
           <form>
             <input 
               type="text"
-              placeholder="Nombre"
+              placeholder="*Nombre"
               value={props.name}
               onChange={props.changeName}
+              className={props.validName?"":"errorShadow"}
             />
 
             <input 
               type="text"
-              placeholder="E-mail"
+              placeholder="*E-mail"
               value={props.email}
               onChange={props.changeEmail}
+              className={props.validEmail?"":"errorShadow"}
             />
 
             <input 
@@ -43,6 +45,8 @@ function ContactForm(props) {
               value={props.comments}
               onChange={props.changeComments}
             />
+
+            <p className="helpText">*Datos requeridos</p>
 
             <div className="rowContainer">
               <p className="text">¿Deseas que te llamémos?</p>            
@@ -83,6 +87,13 @@ function ContactForm(props) {
         .text{
           margin: 10px;
         }
+        .helpText{
+          text-align: left;
+          font-size: 10px;
+          font-weight: bold;
+          margin: 0px 15px;
+          margin-top: -5px;
+        }
         .contactForm{
           display: grid;
           grid-template-columns: repeat(2,1fr);
@@ -97,6 +108,15 @@ function ContactForm(props) {
           margin: 10px;
           border-radius: 10px;
           border: 2px solid #052A4F;
+        }
+        .contactForm input.errorShadow,
+        .contactForm textarea.errorShadow{
+          -moz-box-shadow:    0px 0px 10px 1px #f00;
+          -webkit-box-shadow: 0px 0px 10px 1px #f00;
+          box-shadow:         0px 0px 10px 1px #f00;
+          /*-moz-box-shadow:    3px 3px 5px 6px #ccc;
+          -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+          box-shadow:         3px 3px 5px 6px #ccc;*/
         }
         .check{
           margin: 16px 5px !important;

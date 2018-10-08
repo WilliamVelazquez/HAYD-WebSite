@@ -14,7 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/WilliamVelazquez/HAYD-WebSite.git"
   },
-  "keywords": [],
+  "keywords": [
+    "js",
+    "react",
+    "NextJs",
+    "PWA",
+    "HAYD"
+  ],
   "author": "William Velazquez <william.velazquez.a@gmail.com> (https://twitter.com/WilliamVlazquez)",
   "license": "ISC",
   "bugs": {

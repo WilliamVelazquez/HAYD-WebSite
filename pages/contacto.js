@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Header from '../components/header';
 import ContactForm from '../components/contact-form';
+//import API from '../utils/api';
 
 class Contacto extends Component{
   state={
@@ -9,41 +10,71 @@ class Contacto extends Component{
     email:'',
     phone:'',
     comments:'',
-    askForCall:false
+    askForCall:false,
+    validName:true,
+    validEmail:true,
   }
 
-  changeName = (name) => {
+  changeName = (event) => {
     this.setState({
-      name
+      name: event.target.value,
+      validName: true
     });
   }
 
-  changeEmail = (email) => {
+  changeEmail = (event) => {
     this.setState({
-      email
+      email: event.target.value,
+      validEmail: true
     });
   }
 
-  changePhone = (phone) => {
+  changePhone = (event) => {
     this.setState({
-      phone
+      phone: event.target.value
     });
   }
 
-  changeComments = (comments) => {
+  changeComments = (event) => {
     this.setState({
-      comments
+      comments: event.target.value
     });
   }
 
-  changeAskForCall = (askForCall) => {
+  changeAskForCall = () => {
+    //event
+    // console.log("askForCall-->",event.target.value);
     this.setState({
       askForCall:!this.state.askForCall
     });
   }
 
+  validateEmail(email) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  validateForm = () => {
+    //let valid = false;
+    let validName = this.state.name.length>1;
+    let validEmail = this.validateEmail(this.state.email);
+    this.setState({
+      validName: validName,
+      validEmail: validEmail
+    });
+    return (validName && validEmail);
+  }
+
   handleSubmit = () => {
     console.log(this.state);
+    let validForm=this.validateForm();
+    if (validForm){
+      console.log("Información enviada!");
+    }
+    else{
+      console.log("Información no válida!");
+      alert("Información no válida!");
+    }
   }
 
   render() {
