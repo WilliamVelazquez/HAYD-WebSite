@@ -21,12 +21,12 @@ function List(props) {
           width: 100%;
         }
         .title{
-          color: #fff;
+          color: ${props.textColor || "#fff"};
           font-weight: bold;
           text-align: ${props.position || "left"};
         }
         .description{
-          color: #fff;
+          color: ${props.textColor || "#fff"};
           margin-left: 10px;
           text-align: ${props.position || "justify"};
         }

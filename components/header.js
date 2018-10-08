@@ -56,6 +56,11 @@ function Header(props) {
           background: #0A73ED;
           padding: 10px;
           border-radius: 0px 0px 10px 10px;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 99;
         }
         header a{
           text-decoration: none;

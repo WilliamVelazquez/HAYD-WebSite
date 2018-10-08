@@ -9,7 +9,6 @@ function RibbonPanel(props) {
         .content{
           background:#e6e2c8;
           width: 80%;
-          max-width: 960px;
           min-height: 3.750em; 
           margin: 2em auto;
           padding: 1.250em;
@@ -18,25 +17,22 @@ function RibbonPanel(props) {
           line-height: 1.5em;
           color: #292929;
         }
-
         .ribbon{
           position:relative;
           padding: 0 0.5em;
           font-size:2.000em;
           margin: 0 0 0 -0.625em;
           line-height: 1.875em;
-          color: #e6e2c8;
+          color: #f1c40f;
+          background: #0a73ed;
           border-radius: 0 0.156em 0.156em 0;
-          background: rgb(123, 159, 199);
           box-shadow: -1px 2px 3px rgba(0,0,0,0.5);
         }
-
         .ribbon:before, .ribbon:after{
           position:absolute;
           content: '';
           display: block;
         }
-
         .ribbon:before{
           width: 0.469em;
           height: 100%;
@@ -46,7 +42,6 @@ function RibbonPanel(props) {
           background:inherit;
           border-radius: 0.313em 0 0 0.313em;
         }
-
         .ribbon:after{
           width: 0.313em;
           height: 0.313em;
@@ -57,17 +52,11 @@ function RibbonPanel(props) {
           box-shadow: inset -1px 2px 2px rgba(0,0,0,0.3);
         }
 
-        @media (max-width: 600px) {
-          
-          body{
-            font-size:0.875em;
-          }
-          
+        @media (max-width: 667px) {
           .ribbon{
             line-height: 1.143em;
             padding: 0.5em;
           }
-          
           .ribbon:before, .ribbon:after{
             font-size: 0.714em;
           }

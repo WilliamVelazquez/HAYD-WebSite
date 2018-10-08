@@ -1,5 +1,6 @@
 import React from 'react';
 
+import RibbonPanel from './ribbon-panel';
 import SimplePanel from './simple-panel';
 import TitleBand from './title-band';
 import List from './list';
@@ -10,16 +11,17 @@ function AboutUs(props) {
 	return(
 		<div className="container">
 
-      <TitleBand title="Misión" position="left"/>
-      <SimplePanel text="Impulsar la materialización de tu plan de negocios mediante el análisis financiero y el diseño de estrategias empresariales para la creación de valor."/>
-      
-      <TitleBand title="Visión" />
-      <SimplePanel text="Ser la consultora de negocios más importante de México con influencia en toda América Latina favoreciendo un impacto económico positivo global."/>
+      <RibbonPanel title="Misión">
+        <p className="text">Impulsar la materialización de tu plan de negocios mediante el análisis financiero y el diseño de estrategias empresariales para la creación de valor.</p>
+      </RibbonPanel>
 
-      <TitleBand title="Valores" />
+      <RibbonPanel title="Visión">
+        <p className="text">Ser la consultora de negocios más importante de México con influencia en toda América Latina favoreciendo un impacto económico positivo global.</p>
+      </RibbonPanel>
 
-      <SimplePanel>
+      <RibbonPanel title="Valores">
         <List
+          textColor="#052a4f"
           items={[
             {key:'Honestidad', description:'Nuestro activo más valioso.'},
             {key:'Responsabilidad', description:'Comprometernos a realizar nuestro trabajo en tiempo en y forma.'},
@@ -28,13 +30,18 @@ function AboutUs(props) {
             {key:'Respeto', description:'Siempre con una actitud y un trato digno.'}
           ]}
         />
-      </SimplePanel>
+      </RibbonPanel>
 
       <SocialNetworks />
 
       <style jsx>{`
         .container{
           width:100%;
+        }
+        .text{
+          font-size: 20px;
+          color: #052a4f;
+          margin-top: 25px;
         }
       `}</style>
     </div>

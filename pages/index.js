@@ -12,6 +12,7 @@ class Home extends Component{
         <style jsx global>{`
           body{
             margin: 0;
+            margin-top: 100px;
             font-family: system-ui;
             background: #052A4F;
           }
