@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Header from '../components/header';
 import ContactForm from '../components/contact-form';
-//import API from '../utils/api';
+import API from '../utils/api';
 
 class Contacto extends Component{
   state={
@@ -12,7 +12,7 @@ class Contacto extends Component{
     comments:'',
     askForCall:false,
     validName:true,
-    validEmail:true,
+    validEmail:true
   }
 
   changeName = (event) => {
@@ -65,10 +65,32 @@ class Contacto extends Component{
     return (validName && validEmail);
   }
 
-  handleSubmit = () => {
+  handleSubmit = async () => {
     console.log(this.state);
     let validForm=this.validateForm();
     if (validForm){
+      const { name, email, phone, comments, askForCall } = this.state;
+      let data={
+        companyName:name,
+        email,
+        phoneNumber:phone,
+        commentary:comments || "Sin observaciones",
+        callBack: askForCall
+      };
+      console.log("Contact Data-->",data);
+      const saveContact = await API.saveContactInfo(data);
+
+      if(saveContact){
+        this.setState({
+          name:'',
+          email:'',
+          phone:'',
+          comments:'',
+          askForCall:false,
+          validName:true,
+          validEmail:true
+        }, () => alert("Información enviada!"));
+      }
       console.log("Información enviada!");
     }
     else{

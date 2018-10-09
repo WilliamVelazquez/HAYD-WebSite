@@ -18,7 +18,7 @@ module.exports = withOffline({
         }
       },
       {
-        urlPattern: new RegExp('^https://hayd.us-west-1.elasticbeanstalk.com/rest/'),
+        urlPattern: new RegExp('^https://hayd.us-west-1.elasticbeanstalk.com/rest/catalogs'),
         handler: 'staleWhileRevalidate',
         options: {
           cacheName: 'api-cache',

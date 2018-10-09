@@ -1,4 +1,4 @@
-const BASE_API = 'http://hayd.us-west-1.elasticbeanstalk.com/rest/';
+const BASE_API = 'https://hayd.us-west-1.elasticbeanstalk.com/rest/';
 
 class Api{
   async saveContactInfo(data){
