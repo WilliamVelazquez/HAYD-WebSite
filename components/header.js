@@ -22,6 +22,7 @@ function Header(props) {
         }
         <title>{props.active || "HAYD"}</title>
         <link rel="icon" href="/static/HAYD.ico" />
+        <link href="/static/fa-styles.css" type="text/css" rel="stylesheet" />
         
         <meta name="theme-color" content="#0A73ED" />
         <link rel="manifest" href="/static/manifest.webmanifest" />

@@ -1,9 +1,12 @@
 import React from 'react';
+import { config } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 //import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 function SocialNetworks(props) {
+  config.autoAddCss = false
+
 	//console.log(props);
   //const element = <FontAwesomeIcon icon={faCoffee} />
 	return(
@@ -48,15 +51,6 @@ function SocialNetworks(props) {
           grid-auto-columns: min-content;
           justify-content: center;
         }
-        .fa{
-          padding: 15px;
-          font-size: 20px;
-          width: 30px;
-          text-align: center;
-          margin: 5px 2px;
-          border-radius: 50%;
-          justify-self: center;
-        }
         a{
           cursor: pointer;
           border: 3px solid #fff;
@@ -70,6 +64,15 @@ function SocialNetworks(props) {
         a:hover{
           color: #052A4F;
           background: #fff;
+        }
+        .fa{
+          padding: 15px;
+          font-size: 20px;
+          width: 30px;
+          text-align: center;
+          margin: 5px 2px;
+          border-radius: 50%;
+          justify-self: center;
         }
       `}</style>
     </div>
